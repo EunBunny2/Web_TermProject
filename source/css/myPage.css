@@ -1,0 +1,38 @@
+#logout_div{
+  text-align: right;
+}
+
+#logout_btn{
+  border: 0;
+  cursor: pointer;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 2vh;
+}
+
+#logout_btn:hover{
+  color: rgb(215, 60, 60);
+  font-weight: bold;
+}
+
+.wrap > h1{
+  text-align: center;
+}
+
+table{
+  width: 100%;
+  text-align: center;
+}
+table, tr, td{
+  padding: 10px;
+}
+table, tr, th, td{
+  border: 1px solid lightgray;
+   border-collapse: collapse;
+}
+th{
+  background-color: rgb(255, 207, 207);
+}
+img{
+  width: 20vh;
+  height : 20vh;
+}

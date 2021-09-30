@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>LiveUs 자원봉사</title>
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="css/all_apply.css">
+  <link rel="stylesheet" href="css/volunteer.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- 상단 네비게이션 메뉴바 -->
+  <div class="header">
+    <div class="menu expanded">
+      <div class="icon-menu close">
+        <div class="icon close"></div>
+      </div>
+      <span class=""><a href="main.html"><img src="img/header/타이틀.png" alt="liveUs 홈 바로가기"></a></span>
+      <span class=""><a href="introduce.html">센터소개</a></span>
+      <span class=""><a href="children.html">센터의 아이들</a></span>
+      <span class=""><a href="adopt.html">입양</a></span>
+      <span class=""><a href="donate.html">후원</a></span>
+      <span class=""><a href="volunteer.html">자원봉사</a></span>
+      <span class=""><a href="signUp.html" id="login_mypage_nav">로그인</a></span>
+    </div>
+    <!-- 메인 배너 -->
+    <div class="main_banner">
+      <img src="img/volunteer/자원봉사_배너.png" alt="메인배너">
+    </div>
+  </div>
+  <div class="wrap">
+    <!-- 자원 봉사 관련 공지 영역  -->
+    <div class="volun_kind">
+      <h4>* 산책 봉사</h4>
+      <p>아이들을 데리고 도심 속 공원을 걸어주세요.<br>
+        산책 봉사는 매일매일 진행됩니다. 상처 받은 아이들에게 따뜻한 사랑을 전해주세요.</p>
+      <h4>* 청소 봉사</h4>
+      <p>아이들에게 쾌적한 환경을 제공해주기 위해 청소가 필요합니다. 청소봉사도 매일매일 진행되므로 많은 참여 부탁드립니다.</p>
+      <h4>* 미용 봉사 및 목욕 봉사</h4>
+      <p>미용 봉사와 목욕 봉사는 경험이 있으신 분들에 한해서 비정기적으로 진행됩니다.
+        일정은 아래 달력 또는 전화 문의를 통해 일정을 확인하실 수 있습니다.</p>
+    </div>
+
+    <!-- 자원 봉사 예약 관련 공지 영역  -->
+    <div class="volun_guidance">
+      <h4>예약 안내</h4>
+      <ol>
+        <li>원하시는 날짜의 예약하기 버튼을 클릭하고 예약해주세요.</li>
+        <li>행사가 없는 날의 제한 인수는 10명입니다.</li>
+        <li>당일 취소 및 무단 불참 시 추후 봉사 신청에 어려움이 생길 수 있습니다.</li>
+        <li>단체 봉사는 전화로 문의주세요.</li>
+      </ol>
+    </div>
+
+    <!-- 달력 영역 -->
+    <div class="calendar_div">
+      <!-- 출처 : https://jerryjerryjerry.tistory.com/26 -->
+      <table id="calendar">
+        <tr>
+          <td><label id="prev_btn">
+              ◀</label>
+          </td>
+          <td id="tbCalendarYM" colspan="5">
+            yyyy년 m월</td>
+          <td><label id="next_btn">
+              ▶
+            </label></td>
+        </tr>
+        <tr>
+          <td>일</td>
+          <td>월</td>
+          <td>화</td>
+          <td>수</td>
+          <td>목</td>
+          <td>금</td>
+          <td>토</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 자원봉사 신청 레이어 -->
+  <div id="apply_div">
+    <p id="apply_date"></p>
+    <h3>자원봉사 신청</h3>
+    <table>
+      <tbody>
+        <tr>
+          <td>이름</td>
+          <td>
+            <input type="text" id='vol_name'>
+          </td>
+        </tr>
+        <tr>
+          <td>생년월일</td>
+          <td>
+            <select id="vol_birth_year">
+              <option value="2005">2005</option>
+              <option value="2004">2004</option>
+              <option value="2003">2003</option>
+              <option value="2002">2002</option>
+              <option value="2001">2001</option>
+              <option value="2000">2000</option>
+              <option value="1999">1999</option>
+              <option value="1998">1998</option>
+              <option value="1997">1997</option>
+              <option value="1996">1996</option>
+              <option value="1995">1995</option>
+              <option value="1994">1994</option>
+              <option value="1993">1993</option>
+              <option value="1992">1992</option>
+              <option value="1991">1991</option>
+              <option value="1990">1990</option>
+              <option value="1989">1989</option>
+              <option value="1987">1987</option>
+              <option value="1986">1986</option>
+              <option value="1985">1985</option>
+              <option value="1984">1984</option>
+              <option value="1983">1983</option>
+              <option value="1982">1982</option>
+              <option value="1981">1981</option>
+              <option value="1980">1980</option>
+            </select>
+            년
+            <select id="vol_birth_month">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            월
+            <select id="vol_birth_day">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            일
+          </td>
+        </tr>
+        <tr>
+          <td>휴대폰 번호</td>
+          <td><input type="tel" id="vol_tel" pattern="(010)[0-9]{4}[0-9]{4}" required>
+            <span>010부터 '-' 하이픈 없이 입력</span>
+          </td>
+        </tr>
+        <tr>
+          <td>시간</td>
+          <td>
+            <label><input type="radio" name="time_select" value="am" checked>오전(9:00~12:00)</label>
+            <label><input type="radio" name="time_select" value="pm">오후(14:00~17:00)</label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" id='ok'>확인</button>
+    <button type="button" id='exit'>취소</button>
+  </div>
+  
+  <script src="js/volunteer.js">
+  </script>
+  <script src="js/all_apply.js">
+  </script>
+</body>
+
+</html>

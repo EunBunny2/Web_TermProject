@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Noto+Serif+KR&display=swap');
+
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #f2f2f2f2;
+  font-family: 'Noto Serif KR', serif;
+}
+div{
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrap{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5vw 20vw;
+}
+
+.main_banner img{
+  width: 100%;
+}
+.title{
+  text-align: center;
+}
+.title h1{
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+.title p{
+  font-size: 1vw;
+  color: #7c7c7c;
+}
+
+.list ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.list li{
+  display: inline-block;
+}
+.item{
+  background-color: white;
+  box-shadow: 1px 1px 8px gray;
+  padding-bottom: 10px;
+  margin: 0.3vw;
+  width: 13vw;
+  height: 20vw;
+  border-radius: 10px;
+  text-align: center;
+}
+.item p{
+  font-size: 1vw;
+  font-weight: bold;
+}
+.item a{
+  display: block;
+  width: 80%;
+  padding: 0.5vw;
+  margin: 0 auto;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 100px;
+  border: 1px solid #F1CDB3;
+  font-size: 1vw;
+  color: black;
+}
+.item a:hover{
+  background-color: #F1CDB3;
+  transition-duration: 0.5s;
+  color: white;
+}
+
+.item_img{
+  height: 65%;
+}
+.item_img img{
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.more-content a{
+  display: block;
+  width: 30%;
+  padding: 1vw;
+  margin: 0 auto;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 100px;
+  border: 1px solid #F1CDB3;
+  font-size: 1vw;
+  color: black;
+  text-align: center;
+}
+.more-content a:hover{
+  background-color: #F1CDB3;
+  color: white;
+  transition-duration: 0.5s;
+}
+.footer{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 2vw;
+  background-color: #7D6253;
+}
+.footer p{
+  margin: 0;
+  color: white;
+  font-size: 1vw;
+}
+
+
+/* 디테일 카드 div */
+#detail_card_div{
+  width: 50vw;
+  background-color: white;
+  box-shadow: 5px 5px 10px gray;
+  position: fixed;
+  top: 30vh;
+  left: 25vw;
+  z-index: 100;
+}
+
+#detail_card_div td{
+  width: 25vw;
+}
+
+#detail_card_div td:nth-child(1){
+  padding: 0px;
+}
+
+#detail_card_div td:nth-child(2){
+  padding: 20px;
+}
+
+#detail_card_div img{
+  width: 100%;
+}
+
+#detail_card_div ul{
+  list-style-type: none;
+  padding-left: 5%;
+}
+
+#detail_card_div ul li:before{
+  content: " + ";
+}
+
+/* 디테일 카드 나가기 버튼 div*/
+#eixt_div{
+  width: 100%;
+  position: fixed;
+  top: 26vh;
+  left: 76vw;
+  z-index: 100;
+}
+
+/* 디테일 카드 나가기 버튼 이미지 */
+#eixt_div img{
+  width: 3%;
+}
+
+/* 디테일 카드 안의 입양문의, 후원하기 버튼 div */
+#btns{
+  text-align: center;
+  margin-top: 2vw;
+}
+
+/* 디테일 카드 안의 입양문의, 후원하기 버튼 */
+.btn_group{
+  text-align: center;
+  margin: auto;
+}
+
+.card_title{
+  font-size: 1.5vw;
+  font-weight: 700;
+}
+
+/* 입양문의, 결연맺기 div 스타일 */
+.inner_popup{
+  padding: 3vw;
+  background-color: #f2f2f2;
+  box-shadow: 5px 5px 10px gray;
+  position: fixed;
+  top: 25vh;
+  left: 33vw;
+  z-index: 200;
+}
+
+
+/* 메뉴바 출처 : https://webclub.tistory.com/582 */
+.menu {
+position: absolute;
+top:30px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+height: 70px;
+width: 70px;
+padding: 15px 20px;
+background: #fff;
+box-shadow: 0 4px 64px rgba(0, 0, 0, 0.2);
+transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+z-index: 2;
+border-radius: 5px;
+}
+.menu.expanded {
+width: 1500px;
+height: 50px;
+}
+.menu span {
+visibility: visible;
+opacity: 1;
+transition: .3s;
+transform: rotateY(0deg);
+}
+.menu a {
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 20px;
+color: #333;
+padding: 1vw;
+transition: .3s;
+}
+.menu img{
+  height: 50px;
+}
+.menu a:hover {
+color: #D84315;
+}
+.menu span:nth-of-type(1) {
+transition-delay: .4s;
+}
+.menu span:nth-of-type(2) {
+transition-delay: .5s;
+}
+.menu span:nth-of-type(3) {
+transition-delay: .6s;
+}
+.menu span:nth-of-type(4) {
+transition-delay: .7s;
+}
+.menu span.hidden {
+width: 0;
+visibility: hidden;
+opacity: 0;
+transform: rotateY(90deg);
+}
+/* 숨김 처리시 마지막 메뉴부터 차례대로 보여지도록 delay 처리 */
+.menu span.hidden:nth-of-type(1) {
+transition-delay: .3s;
+}
+.menu span.hidden:nth-of-type(2) {
+transition-delay: .2s;
+}
+.menu span.hidden:nth-of-type(3) {
+transition-delay: .1s;
+}
+.menu span.hidden:nth-of-type(4) {
+transition-delay: 0s;
+}
+.icon-menu {
+order: 1;
+position: relative;
+display: flex;
+align-items: center;
+width: 30px;
+height: 34px;
+padding: 5px;
+cursor: pointer;
+}
+.icon-menu .icon {
+position: relative;
+width: 100%;
+height: 2px;
+background: #aaa;
+}
+.icon-menu .icon::before {
+position: relative;
+display: flex;
+width: 100%;
+height: 2px;
+background: #aaa;
+top:-7px;
+content: "";
+transition: top .25s ease, bottom .25s ease, transform .5s ease;
+}
+.icon-menu .icon::after {
+position: relative;
+display: flex;
+bottom: -5px;
+height: 2px;
+width: 100%;
+background: #aaa;
+content: "";
+transition: top .25s ease, bottom .25s ease, transform .5s ease;
+}
+.icon-menu:hover .icon:before {
+top: -9px;
+}
+.icon-menu:hover .icon:after {
+bottom: -7px;
+}
+/* X 닫기 버튼 스타일*/
+.icon-menu .icon.close {
+height: 0;
+}
+.icon-menu .icon.close::before {
+transform: rotate(45deg);
+top: 0;
+}
+.icon-menu .icon.close::after {
+transform: rotate(-45deg);
+bottom: 2px;
+}
+.icon-menu:hover .icon.close::before {
+transform: rotate(405deg);
+}
+.icon-menu:hover .icon.close::after {
+transform: rotate(315deg);
+}

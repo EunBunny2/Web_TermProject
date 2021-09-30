@@ -1,0 +1,185 @@
+/* 딤처리 레이어 */
+.dim{
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: black;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+}
+
+/* 아이 등록 레이어 */
+#reg_popup{
+  width: 35%;
+  padding: 30px;
+  margin: auto;
+  box-shadow: 5px 5px 10px gray;
+  background-color: white;
+  border: 2vw solid #ffe7d6;
+  position: fixed;
+  top: 5%;
+  left: 30%;
+  z-index: 100;
+  text-align: center;
+  font-size: 1vw;
+}
+
+#reg_popup table{
+  text-align: left;
+}
+
+#reg_popup table, tr, td{
+  padding: 0;
+}
+
+#reg_popup td:nth-child(2n-1){
+  width: 30%;
+  color: gray;
+}
+
+/* 등록 레이어 안의 타이틀 */
+#reg_popup h3{
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+#reg_popup hr{
+  border-top : 4px double gray;
+  text-align: center;
+}
+
+
+/* 등록 레이어 안의 버튼 */
+#reg_popup button{
+  margin-top: 5%;
+  font-size: 1vw;
+
+}
+
+/* 등록 레이어 안의 특이사항 텍스트 에리어*/
+#reg_popup textarea{
+  width: 100%;
+  resize: none;
+  font-size: 1vw;
+}
+
+#test_div{
+  width: 40%;
+  height: 60%;
+  position: fixed;
+  border-radius: 50px 0px 50px 0px;
+  top : 30%;
+  left: 30%;
+  z-index: 30;
+  background-color: white;
+  text-align: center;
+}
+
+#test_content{
+  padding: 5% 10%;
+}
+
+#cover_img_btn{
+  width: 50%;
+  margin: 10%;
+}
+
+#cover_img_btn:hover{
+  cursor: pointer;
+  animation: beat 0.5s infinite;
+}
+
+#icon_o {
+  width: 30%;
+  margin: 5%;
+}
+
+#icon_o:hover{
+  cursor: pointer;
+  animation: beat 0.25s infinite;
+}
+
+#icon_x {
+  width: 30%;
+  margin: 5%;
+}
+
+#icon_x:hover{
+  cursor: pointer;
+  animation: beat 0.25s infinite;
+}
+
+#head {
+  width: 100%;
+  height: 10%;
+  border-radius: 50px 0px 0px 0px;
+  overflow: hidden;
+  background: linear-gradient( to right, #B6E3E9, #FDAFAB );
+  text-align: right;
+}
+
+#head > span{
+  display: inline-block;
+  margin: 10px;
+  font-size: 2vh;
+}
+
+#head > span:hover{
+  cursor: pointer;
+  font-size: 2.5vh;
+  transition-duration: 0.25s;
+}
+
+/* 버튼 디자인 출처: https://codepen.io/onediv/pen/jEmjap */
+body:before{
+  content:'';
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+button{
+  background:#d1af97;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1vw;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  margin: 0.5vw;
+}
+button:hover{
+  background:#fff;
+  color:#F1CDB3;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #d1af97;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+@keyframes beat{
+  0% { transform: rotate(0deg); }
+ 50% { transform: rotate(6deg); }
+100% { transform: rotate(0deg); }
+}

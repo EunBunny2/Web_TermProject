@@ -1,0 +1,15 @@
+.main-text p{
+  font-size: 1vw;
+  margin-bottom: 3vw;
+}
+.sub-text img{
+  width: 15vw;
+  margin: 2vw;
+}
+.sub-text p:nth-child(1){
+  font-size: 1vw;
+  font-weight: bold;
+}
+.sub-text p:nth-child(2){
+  font-size: 1vw;
+}

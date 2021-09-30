@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>LiveUs</title>
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="css/all_apply.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- 상단 네비게이션 메뉴바 -->
+  <div class="header">
+    <div id="nav" class="menu expanded">
+      <div class="icon-menu close">
+        <div class="icon close"></div>
+      </div>
+      <span class=""><a href="main.html"><img src="img/header/타이틀.png" alt="liveUs 홈 바로가기"></a></span>
+      <span class=""><a href="introduce.html">센터소개</a></span>
+      <span class=""><a href="children.html">센터의 아이들</a></span>
+      <span class=""><a href="adopt.html">입양</a></span>
+      <span class=""><a href="donate.html">후원</a></span>
+      <span class=""><a href="volunteer.html">자원봉사</a></span>
+      <span class=""><a href="signUp.html" id="login_mypage_nav">로그인</a></span>
+    </div>
+    <!-- 메인 배너 -->
+    <div class="main_banner">
+      <a href="introduce.html"><img src="img/main/메인배너.png" alt="메인배너"></a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="content">
+      <!-- 센터의 아이들 타이틀 -->
+      <div class="title">
+        <h1>센터의 아이들</h1>
+        <p>당신의 가족을 만나보세요</p>
+      </div>
+
+      <!-- 센터의 아이들 미리보기 (최대 4개) -->
+      <div class="list">
+        <ul id="card_list">
+        </ul>
+      </div>
+
+      <!--디테일 카드 나가기 버튼-->
+      <div id="eixt_div">
+        <a href="#none" id="exit_icon"><img src="img/exit_icon.png" alt="나가기"></a>
+      </div>
+
+      <!--디테일 카드 영역-->
+      <div id="detail_card_div">
+        <table>
+        </table>
+      </div>
+
+      <!-- 입양문의 팝업 레이어 영역 -->
+      <div id="adopt_inquiry_div" class="inner_popup">
+        <h3>입양 문의</h3>
+        <form>
+          <p>
+            이름 :
+            <input type="text" id="adopt_name">
+          </p>
+          <p>
+            성별 :
+            <label><input type="radio" name="p_sex" value="male" checked>남</label>
+            <label><input type="radio" name="p_sex" value="female">여</label>
+          </p>
+          <p>
+            생년월일 :
+            <select id="adopt_birth_year">
+              <option value="2001">2001</option>
+              <option value="2000">2000</option>
+              <option value="1999">1999</option>
+              <option value="1998">1998</option>
+              <option value="1997">1997</option>
+              <option value="1996">1996</option>
+              <option value="1995">1995</option>
+              <option value="1994">1994</option>
+              <option value="1993">1993</option>
+              <option value="1992">1992</option>
+              <option value="1991">1991</option>
+              <option value="1990">1990</option>
+              <option value="1989">1989</option>
+              <option value="1987">1987</option>
+              <option value="1986">1986</option>
+              <option value="1985">1985</option>
+              <option value="1984">1984</option>
+              <option value="1983">1983</option>
+              <option value="1982">1982</option>
+              <option value="1981">1981</option>
+              <option value="1980">1980</option>
+            </select>
+            년
+            <select id="adopt_birth_month">
+              <option value="01">1</option>
+              <option value="02">2</option>
+              <option value="03">3</option>
+              <option value="04">4</option>
+              <option value="05">5</option>
+              <option value="06">6</option>
+              <option value="07">7</option>
+              <option value="08">8</option>
+              <option value="09">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            월
+            <select id="adopt_birth_day">
+              <option value="01">1</option>
+              <option value="02">2</option>
+              <option value="03">3</option>
+              <option value="04">4</option>
+              <option value="05">5</option>
+              <option value="06">6</option>
+              <option value="07">7</option>
+              <option value="08">8</option>
+              <option value="09">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            일
+            <span>※만 19세 이상만 입양할 수 있습니다</span>
+          </p>
+          <p>
+            휴대폰 번호 :
+            <input type="tel" id="adopt_tel" pattern="(010)[0-9]{4}[0-9]{4}" required>
+              <span>010부터 '-' 하이픈 없이 입력</span>
+          </p>
+          <p>
+            주소 :
+            <input type="text" id="address" name="address" size="50">
+          </p>
+          <p>
+            직업 :
+            <input type="text" name="job" id="job">
+          </p>
+          <p>
+            가족구성 :
+            <label><input type="checkbox" name="family" value="parent">부/모</label>
+            <label><input type="checkbox" name="family" value="partner">배우자</label>
+            <label><input type="checkbox" name="family" value="son_and_daughter">자녀</label>
+            <label><input type="checkbox" name="family" value="sibling">형제</label>
+            <label><input type="checkbox" name="family" value="no_family">없음</label>
+          </p>
+          <p>
+            반려동물 양육 경험 :
+            <input type="radio" name="have_experience" value="유">유
+            <input type="radio" name="have_experience" value="무" checked>무
+          </p>
+          <button type="button">확인</button>
+          <button type="reset">취소</button>
+        </form>
+      </div>
+
+      <!-- 결연맺기 팝업 레이어 영역 -->
+      <div id="spon_div" class="inner_popup">
+        <h3>결연 맺기</h3>
+        <form>
+          <p>
+            이름 :
+            <input type="text" id="spon_name">
+          </p>
+          <p>
+            휴대폰 번호 :
+            <input type="tel" id="spon_tel" pattern="(010)[0-9]{4}[0-9]{4}" required>
+              <span>010부터 '-' 하이픈 없이 입력</span>
+          <p>
+            주소 :
+            <input type="text" name="address" id="spon_address" size="50">
+          </p>
+          <p>
+            결연 기간 :
+            <select name="spon_term" id="spon_term">
+              <option value="1m">1개월</option>
+              <option value="6m">6개월</option>
+              <option value="1y">1년</option>
+            </select>
+          </p>
+          <button type="button">확인</button>
+          <button type="reset">취소</button>
+        </form>
+      </div>
+
+      <!-- 센터의 아이들 바로가기 -->
+      <div class="more-content">
+        <p>
+          <a href="children.html">더 많은 아이들 보러 가기</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- 서브 카피 -->
+    <table id="sub-copy">
+      <tr>
+        <td>
+          <h3>"후원으로 아이들의 삶이 안정됩니다."</h3>
+          <p>당신의 후원을 통해 아이들은<br>
+            배가 고플 때 밥을 먹고, 아플 때 병원을 가고,<br>
+            안전하게 잠을 자는 안정적인 삶을 살 수 있습니다.
+          </p>
+        </td>
+        <td>
+          <img src="img/main/retriever.png" alt="">
+        </td>
+      </tr>
+    </table>
+
+    <!-- 후원 종류 -->
+    <div class="content">
+      <div class="title">
+        <h1>후원</h1>
+        <p>아이들에게 따뜻한 손을 내밀어 주세요</p>
+      </div>
+      <div class="container">
+        <div class="box">
+          <a class="trigger" href="#">
+            <img id="first" src="img/donate/물품및사료.png" alt="물품및사료.png">
+          </a>
+          <span>물품 및 사료 후원</span>
+        </div>
+        <div class="box">
+          <a class="trigger" href="#">
+            <img id="second" src="img/donate/기금.png" alt="기금.png">
+          </a>
+          <span>기금 후원</span>
+        </div>
+        <div class="box">
+          <a class="trigger" href="#">
+            <img id="third" src="img/donate/결연.png" alt="결연.png">
+          </a>
+          <span>결연 후원</span>
+        </div>
+        <div class="box">
+          <a class="trigger" href="#">
+            <img id="fourth" src="img/donate/광고.png" alt="광고.png">
+          </a>
+          <span>광고 후원</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 후원 종류 이미지 클릭시 설명 레이어 등장 -->
+  <div class="modal-wrapper">
+    <div class="modal">
+      <div class="head">
+        <a class="btn-close trigger" href="#">
+          X
+        </a>
+      </div>
+      <div class="popup_content" id="first_popup">
+        <h3>물품 및 사료 후원</h3>
+        <p>생활에 필요한 물품들과 사료를 후원 받습니다.</p>
+        <p>식기, 고양이 화장실, 동물 전용 샴푸, 장난감, 수건, 담요 등
+          후원하실 물품들을 아래 주소로 보내주세요.</p>
+        <br>
+        <p>대전광역시 OO구 OO동 LiveUs</p>
+      </div>
+      <div class="popup_content" id="second_popup">
+        <h3>기금 후원</h3>
+        <p>운영 및 치료에 필요한 기금을 후원 받습니다.</p>
+        <p>아래 계좌로 송금해주시고 폼을 작성해주세요.
+          기금 후원에 참가해주시는 분들께 감사의 편지와 함께
+          소정의 상품을 보내드립니다.</p>
+        <br>
+        <p>농협 000-0000-0000-00 조은빈</p>
+      </div>
+      <div class="popup_content" id="third_popup">
+        <h3>결연 후원</h3>
+        <p>센터의 아이와 결연을 맺어 정기적으로 후원합니다.</p>
+        <p>후원 기간은 3개월 단위로 이루어지며 1개월에 3만원으로 아이의 생활에 도움을 줄 수 있습니다.
+          결연 후원에 참가해주시는 분들께서는 감사의 편지와 함께 후원하시는 아이의 사진을 정기적으로 받아보실 수 있습니다.
+          자세한 문의는 센터로 연락 주시길 바랍니다.</p>
+        <p>123-4567-8910</p>
+      </div>
+      <div class="popup_content" id="fourth_popup">
+        <h3>광고 후원</h3>
+        <p>짧은 광고를 시청하면 아이들에게 후원됩니다.</p>
+        <p>눈 깜짝할 새에 지나가는 30초로 아이들의 삶이 바뀔까 생각하실 수 있습니다.
+          물론 한 명의 짧은 광고 시청만으로 아이들에게 가족이 생기고, 커다란 집이 생기지는 않습니다.
+          하지만 한 명의 참여가 모이고 모여 아이들에게 따뜻한 잠자리가 되고, 밥 한 끼가 됩니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 바닥글 -->
+  <div class="footer">
+    <p>유기동물보호소 LiveUs</p>
+    <p>Company Name : ㈜바니유니버스</p>
+    <p>사업자등록번호 : 000-00-00000</p>
+    <p>대표 : 조은빈</p>
+  </div>
+
+  <script src="js/main.js">
+  </script>
+  <script src="js/all_apply.js">
+  </script>
+</body>
+
+</html>

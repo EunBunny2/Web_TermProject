@@ -1,0 +1,32 @@
+table{
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  margin: auto;
+}
+td, th{
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 1vw;
+}
+td{
+  border-left: 1px solid gray;
+}
+.submit_btn_group{
+  text-align: center;
+  margin: 2vw;
+}
+.submit_btn_group input{
+  background-color: #F1CDB3;
+	border: 2px solid #F1CDB3;
+  width: 40%;
+  font-weight: bold;
+  padding: 10px 5px;
+  border-radius: 100px;
+  margin: 1vw;
+}
+.submit_btn_group input:hover {
+	background-color: #7D6253;
+	border-color: #7D6253;
+  color: white;
+}

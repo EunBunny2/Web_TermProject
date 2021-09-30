@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/myPage.css">
+    <link rel="stylesheet" href="css/all_apply.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>LiveUs 마이페이지</title>
+  </head>
+  <body>
+      <!-- 상단 네비게이션 메뉴바 -->
+    <div class="header">
+      <div id="nav" class="menu expanded">
+        <div class="icon-menu close">
+          <div class="icon close"></div>
+        </div>
+        <span class=""><a href="main.html"><img src="img/header/타이틀.png" alt="liveUs 홈 바로가기"></a></span>
+        <span class=""><a href="introduce.html">센터소개</a></span>
+        <span class=""><a href="children.html">센터의 아이들</a></span>
+        <span class=""><a href="adopt.html">입양</a></span>
+        <span class=""><a href="donate.html">후원</a></span>
+        <span class=""><a href="volunteer.html">자원봉사</a></span>
+        <span class=""><a href="signUp.html" id="login_mypage_nav">로그인</a></span>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <h1>마이 페이지</h1>
+      <div id="logout_div">
+        <button type="button" id="logout_btn">[로그아웃]</button>
+      </div>
+      <!-- 입양 문의 명단 영역 -->
+      <div>
+        <h2>입양 문의 명단</h2>
+        <table id="adopt_tab">
+        </table>
+      </div>
+      <hr>
+      <!-- 후원 명단 영역 -->
+      <div>
+        <h2>후원 명단</h2>
+        <table id="spon_tab">
+        </table>
+      </div>
+      <hr>
+      <!-- 자원봉사 신청 명단 영역 -->
+      <div>
+        <h2>자원봉사 신청 명단</h2>
+        <table id="vol_tab">
+        </table>
+      </div>
+    </div>
+
+    <script src="js/myPage.js">
+    </script>
+    <script src="js/all_apply.js">
+    </script>
+  </body>
+</html>
